@@ -8,10 +8,6 @@ function App() {
   
    <div className="App">
          <JumboTron/>
-      <NavBar></NavBar>
-      <div>
-        <p>I'm a </p>
-      </div>
 
 
   </div>
