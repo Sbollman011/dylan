@@ -1,17 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 import JumboTron from './components/JumboTron';
-import ThemeSwitcher from './components/ThemeSwitcher';
-import {NavBar, Nav, NavItem} from 'bootstrap';
+import NavBar from './components/NavBar';
 
 
 function App() {
   return (
   
    <div className="App">
-      <JumboTron/>
+         <JumboTron/>
+      <NavBar></NavBar>
       <div>
-     </div>
+        <p>I'm a </p>
+      </div>
+
+
   </div>
 
   );

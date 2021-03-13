@@ -7,13 +7,18 @@ class JumboTron extends Component {
       return(
   
 
-<div class="jumbotron jumbotron-fluid" >
-  <div class="container">
-    <h1 class="display-4">Steven Bollman</h1>
-    <p class="lead">Full Stack Engineer</p>
-  </div>
-</div>
-      );
+      <div className="jumbotron jumbotron-fluid" >
+        <div className="container">
+          <h1 className="display-4">Hi Dylan</h1>
+          <p className="lead">Welcome to Seattle</p>
+          <button type="button" className="btn btn-primary" id ='dylanButton'>What should you do?</button>
+
+          <hr className="my-4"/>
+          <p></p>
+
+        </div>
+      </div>
+    );
   }
 }
 export default JumboTron;
