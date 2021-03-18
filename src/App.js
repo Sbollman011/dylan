@@ -2,6 +2,8 @@ import './App.css';
 import JumboTron from './components/JumboTron';
 import NavBar from './components/NavBar';
 import MapContainer from './components/Map'
+import Pets from './components/Pets'
+import House from './components/House'
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,11 +18,14 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+        <Route path="/House">
+            <House />
+          </Route>
           <Route path="/Map">
             <Map />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/Pets">
+            <Pets />
           </Route>
           <Route path="/">
             <Home />
@@ -45,6 +50,4 @@ function Map() {
   );
 }
 
-function Users() {
-  return <h2>Users</h2>;
-}
+

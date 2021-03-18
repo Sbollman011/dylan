@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Alert} from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 
 const mapStyles = {
@@ -8,6 +9,33 @@ const mapStyles = {
 };
 
 export class MapContainer extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      lat1: 0,
+      long1: 0,
+    };
+
+    this.getLocation = this.getLocation.bind(this);
+  }
+
+
+
+ getLocation() {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    this.setState({lat1 : position.coords.latitude,
+    lat1 : position.coords.longitude
+    });
+  });
+ }
+  componentDidMount() {
+    this.getLocation();
+  }
+
+
+
   render() {
     return (
       <Map
@@ -16,11 +44,12 @@ export class MapContainer extends Component {
         style={mapStyles}
         initialCenter={
           {
-            lat: -1.2884,
-            lng: 36.8233
+            lat:  this.state.lat1, 
+            lng: this.state.long1
           }
         }
       />
+
     );
   }
 }
