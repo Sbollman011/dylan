@@ -14,8 +14,8 @@ export class MapContainer extends Component {
     super(props);
 
     this.state = {
-      lat1: 0,
-      long1: 0,
+      lat1: 47.549644799999996,
+      long1: -122.3753728,
     };
 
     this.getLocation = this.getLocation.bind(this);
@@ -25,11 +25,11 @@ export class MapContainer extends Component {
 
  getLocation() {
   navigator.geolocation.getCurrentPosition(function(position) {
-    this.setState({lat1 : position.coords.latitude,
-    lat1 : position.coords.longitude
+  console.log(position.coords.latitude);
+   console.log(position.coords.longitude);
     });
-  });
- }
+  }
+ 
   componentDidMount() {
     this.getLocation();
   }
